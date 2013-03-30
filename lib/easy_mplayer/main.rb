@@ -1,7 +1,7 @@
 class MPlayer
   # all of these can be overridden by passing them to #new
   DEFAULT_OPTS = {
-    :program               => '/usr/bin/mplayer',
+    :program               => '/usr/local/bin/mplayer',
     :message_style         => :info,
     :seek_size             => 10,
     :thread_safe_callbacks => true
@@ -99,7 +99,7 @@ class MPlayer
   
   # true if we can call #play without an exception
   def ready?
-    @opts[:path] and File.readable?(@opts[:path])
+    @opts[:path] #and File.readable?(@opts[:path])
   end
   
   def must_be_ready! # :nodoc:
