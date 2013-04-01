@@ -1,5 +1,6 @@
 require 'fcntl'
 
+
 class MPlayer
   class Worker # :nodoc:all
     include ColorDebugMessages
